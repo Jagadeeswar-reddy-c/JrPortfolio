@@ -106,3 +106,10 @@ span {
 .feature-box-01 .feature-content p {
     margin: 0;
 }
+
+@media screen and (max-width: 900px) {
+    .img-project {
+        height: 170px;
+        /* margin-top: 40%; */
+    }
+}
