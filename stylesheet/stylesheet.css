@@ -107,10 +107,17 @@ span {
     margin: 0;
 }
 
+.pict {
+    width: 400px;
+}
+
 @media screen and (max-width: 1250px) {
     .img-project {
         height: 170px;
         /* margin-top: 40%; */
+    }
+    .pict {
+        width: 250px;
     }
 }
 
