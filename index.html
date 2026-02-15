@@ -1,429 +1,228 @@
 <!DOCTYPE html>
-<html lang="us-en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jr</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="./stylesheet/stylesheet.css" rel="stylesheet" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Meta Information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>Jagadeeswar Reddy Chennuru | ML Engineer & Systems Builder</title>
+  <meta name="description" content="MSc Computer Science student at Saarland University specializing in Machine Learning, Python development, and production systems. Building algorithmic trading platforms and computer vision solutions.">
+  <meta name="keywords" content="Machine Learning, Python, Computer Science, ML Engineer, Trading Systems, Computer Vision, Data Analysis, Portfolio, Jagadeeswar Reddy">
+  <meta name="author" content="Jagadeeswar Reddy Chennuru">
+  
+  <!-- Open Graph Meta Tags (LinkedIn, Facebook preview) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jagadeeswar Reddy Chennuru | ML Engineer & Systems Builder">
+  <meta property="og:description" content="Building production ML systems for financial markets and computer vision applications.">
+  <meta property="og:url" content="https://jagadeeswar-reddy-c.github.io/JrPortfolio/">
+  <meta property="og:image" content="https://jagadeeswar-reddy-c.github.io/JrPortfolio/images/preview.png">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jagadeeswar Reddy Chennuru | ML Engineer">
+  <meta name="twitter:description" content="MSc CS student building production ML systems">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  
+  <!-- Preconnect to improve performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-background"></div>
 
-<body class="body">
-    <!-- Header -->
-    <section id="header">
-        <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <img class="logo-header" src="./images/logo(440x440).png" alt="logo" height="30" />
-                    <span class="fs-4 mx-3">Jr</span>
-                </a>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-content">
+        <a href="#hero" class="nav-logo">JR</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                <ul class="nav nav-pills ">
-                    <li class="nav-item mx-1"><a href="#title" class="nav-link" aria-current="page">Home</a></li>
-                    <li class="nav-item mx-1"><a href="#education" class="nav-link">Education</a></li>
-                    <li class="nav-item mx-1"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item mx-1"><a href="#Certifications" class="nav-link">Certificates</a></li>
-                    <li class="nav-item mx-1"><a href="#Projects" class="nav-link">Projects</a></li>
-                </ul>
-            </header>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting">Hi there! 👋 I'm</p>
+        <h1 class="hero-name">Jagadeeswar Reddy Chennuru</h1>
+        <p class="hero-title">MSc Computer Science Student | ML Engineer | Systems Builder</p>
+        <p class="hero-description">
+          Building production-grade machine learning systems, algorithmic trading platforms, 
+          and computer vision solutions with a focus on real-world impact and scalability.
+        </p>
+        
+        <div class="hero-metrics">
+          <div class="metric">
+            <span class="metric-value">90%+</span>
+            <span class="metric-label">Model Accuracy</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">10K+</span>
+            <span class="metric-label">Sensor Readings</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">IEEE</span>
+            <span class="metric-label">Published</span>
+          </div>
         </div>
-    </section>
 
-    <!-- Title -->
-    <section id="title">
-        <div class="container col-xxl-8 px-4 py-5 ">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="./images/circle img.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="900" height="700" loading="lazy" style="border-radius: 50%;">
-                </div>
-                <div class="col-lg-6">
-                    <h6 class="display-5 text-body-emphasis lh-1 mb-3">Hello Coders</h6>
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">I'm Chennuru Jagadeeswar Reddy,</h1>
-                    <p class="lead">a <span>passionate developer</span> from India. Recent graduate in <span>Computer Science and Engineering.</span> Eager to make an impact in the digital realm.
-                    </p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a href="#Experience" class="btn btn-outline-secondary btn-lg px-4">Experience</a>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-cta">
+          <!-- Links will be dynamically populated -->
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Education -->
-    <section id="education">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2>Education</h2>
-            </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4 ">
-                <div class="col ">
-                    <div class="feature-box-01 media gradient-color-edu1">
-                        <!-- <img src="..." class="card-img-top" alt="..."> -->
-                        <div class="card-body">
-                            <h5 class="card-title">B.Tech in Computer Science and Engineering (CGPA-8.7)</h5>
-                            <p class="card-text">K.S.R.M College of Engineering</p>
-                            <small>June 2024</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="feature-box-01 media gradient-color-edu2">
-                        <!-- <img src="..." class="card-img-top" alt="..."> -->
-                        <div class="card-body">
-                            <h5 class="card-title">Pre-University Course in M.P.C (Inter)</h5>
-                            <p class="card-text">Rajiv Gandhi University of Knowledge and Technology</p>
-                            <small>Dec 2020</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="feature-box-01 media gradient-color-edu3">
-                        <!-- <img src="..." class="card-img-top" alt="..."> -->
-                        <div class="card-body">
-                            <h5 class="card-title">SSC</h5>
-                            <p class="card-text">Keshava Reddy school</p>
-                            <small>June 2017</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ABOUT ME</span>
+        <h2 class="section-title">Who I Am</h2>
+        <p class="section-description">
+          MSc Computer Science student at Saarland University with hands-on experience 
+          building end-to-end ML pipelines, automation systems, and real-time dashboards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Project Section -->
+  <section id="hero-project" class="section">
+    <div class="container">
+      <div class="hero-project-card reveal" id="hero-project-content">
+        <!-- Content will be dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">EXPERTISE</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-description">
+          A comprehensive toolkit for building production-grade systems
+        </p>
+      </div>
+      <div id="skills-content">
+        <!-- Skills will be dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">PORTFOLIO</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-description">
+          Real-world applications and research implementations
+        </p>
+      </div>
+      
+      <div id="project-filters" class="project-filters">
+        <!-- Filters will be dynamically populated -->
+      </div>
+      
+      <div id="projects-content" class="projects-grid">
+        <!-- Projects will be dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CAREER</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-description">
+          Professional journey and key contributions
+        </p>
+      </div>
+      <div id="experience-content">
+        <!-- Experience will be dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ACADEMICS</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div id="education-content" style="display: grid; gap: 2rem; max-width: 800px; margin: 0 auto;">
+        <!-- Education will be dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">RESEARCH</span>
+        <h2 class="section-title">Publications</h2>
+      </div>
+      <div id="publications-content" style="max-width: 800px; margin: 0 auto;">
+        <!-- Publications will be dynamically populated -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-content">
+        <div class="section-header">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-description">
+            Open to discussing opportunities, collaborations, or just having a tech chat
+          </p>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="mt-5">
-        <div class="container">
-            <div class="row justify-content-center section-heading mb-5">
-                <div class="col-lg-15 text-center">
-                    <h3>Technical Competencies</h3><br>
-                    <p>These are technical skills that I have aquired thus far in my computer science career. I am not claiming to be a master in all of these skills, that would be amazing, but it is simply not true. With that said, I am confident that I
-                        can hold a position that utilizes any of the following competencies and increase my mastery in any of these skills if needed.</p>
-                </div>
-            </div>
-            <div class="row gy-4">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="feature-box-01 media gradient-color-edu1">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16">
-                                <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0"/>
-                              </svg>
-                        </div>
-                        <div class="feature-content col">
-                            <h5>Languages</h5>
-                            <p>Python, Java, C, C++(Biginner), MySQL, HTML, CSS, JSON, YAML, PHP</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="feature-box-01 media gradient-color-edu2">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-laptop-fill" viewBox="0 0 16 16">
-                                <path d="M2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-                              </svg>
-                        </div>
-                        <div class="feature-content col">
-                            <h5>Coding Methodologies</h5>
-                            <p>Test-Driven-Development, Agile, Clean Code, Useful Comments </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="feature-box-01 media gradient-color-edu3">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-triangle-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M7.022 1.566a1.13 1.13 0 0 1 1.96 0l6.857 11.667c.457.778-.092 1.767-.98 1.767H1.144c-.889 0-1.437-.99-.98-1.767z"/>
-                              </svg>
-                        </div>
-                        <div class="feature-content col">
-                            <h5>Project Management</h5>
-                            <p>GitHub, Jupyter Notebooks, Presentation Skills, Team Leadership/Management, Cross-Team Communication, Great Sense of Humor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="feature-box-01 media gradient-color-edu1">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
-                                <path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
-                              </svg>
-                        </div>
-                        <div class="feature-content col">
-                            <h5>Interests</h5>
-                            <p>Software Engineering, Software Development, Cyber-Security, Machine Learning, Data Visualization, Buisiness Analytics, Artificial Intelligence, Generative AI</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="feature-box-01 mediac gradient-color-edu2">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
-                                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
-                              </svg>
-                        </div>
-                        <div class="feature-content col">
-                            <h5>Relevant Courses</h5>
-                            <p> Data Structures<br>Software Engineering in C++<br>Java<br>Object Oriented Design<br>Operating Systems<br>Computer Organization<br>Systems Security<br> Machine Learning<br>Artificial Intelligence<br>Algorithms<br>Project Management
-                                <br>Creating Things that Think
-                                <br>Ethics in Computer Science<br>Linear Algebra for Data Science<br>Discrete Structures<br>Data Mining<br>Software Metrics</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="feature-box-01 media gradient-color-edu3">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-distribute-vertical" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1 1.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5m0 13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 0-1h-13a.5.5 0 0 0-.5.5"/>
-                                <path d="M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
-                              </svg>
-                        </div>
-                        <div class="feature-content col">
-                            <h5>Development</h5>
-                            <p>Linux, Windows, Virtual Machines, Bootstrap, JSON, Anaconda, Numpy, MatPlotLib, Pandas, PyTorch, Tensorflow, GPT, Generative AI Tools</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="contact-links" class="contact-links">
+          <!-- Contact links will be dynamically populated -->
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Experience -->
-    <section id="Experience">
-        <div class="container">
-            <div class="text-center mt-5 mb-5">
-                <h2>Experience</h2>
-            </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        © 2026 Jagadeeswar Reddy Chennuru. Built with passion and modern web tech.
+      </p>
+    </div>
+  </footer>
 
-
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading fw-normal lh-1">Intern <span class="text-body-secondary">Feb 2024 -- Aug 2024</span></h2>
-                    <h5 class="featurette-heading fw-normal lh-1">NIELIT <span class="text-body-secondary">Jorhat, Assam</span></h5>
-
-                    <p class="lead">
-                        <li>Leading data analysis efforts at NIELIT's Hydroponics project, harnessing insights to optimize plant growth and resource utilization.</li>
-                        <li>Implementing IoT solutions for real-time monitoring, ensuring precision control over environmental variables crucial for hydroponic systems' success.</li>
-                        <li>Leveraging data analytics to fine-tune parameters like nutrient levels and pH, enhancing crop yield and quality in hydroponic setups.</li>
-                        <li>Collaborating on innovative monitoring techniques, integrating IoT sensors to gather comprehensive data for informed decision-making in agricultural practices.</li>
-                    </p>
-                    <p class="text-center"><a class="btn btn-outline-secondary btn-lg px-4" href="https://github.com/Jagadeeswar-reddy-c/C-DAC">More Details</a></p>
-
-                </div>
-                <div class="col-md-5 order-md-1 text-center my-3">
-
-                    <img class="pict" src="./images/Certificates/intern offer nielit.png" alt="intern certificate" />
-                </div>
-            </div>
-            <div class="row featurette my-5">
-                <div class="col-md-7">
-
-
-                    <h2 class="featurette-heading fw-normal lh-1">Software Engineering Intern <span class="text-body-secondary">Jan 2023 -- Sept 2023</span></h2>
-                    <h5 class="featurette-heading fw-normal lh-1">VirtualMaze Softsys Private limited <span class="text-body-secondary">Tamil Nadu, Chennai</span></h5>
-                    <p class="lead">
-                        <li>Leveraged advanced techniques for geo-spatial data analysis, extracting valuable insights from complex datasets.</li>
-                        <li>Managed MySQL databases efficiently, ensuring optimal performance, data integrity, and security for project requirements.</li>
-                        <li>Developed and implemented image processing algorithms for various applications, enhancing images and extracting meaningful information.</li>
-                        <li>Actively engaged in collaborative teamwork, contributing ideas and coordinating tasks to achieve project objectives effectively.</li>
-                    </p>
-                    <p class="text-center"><a class="btn btn-outline-secondary btn-lg px-4" href="https://github.com/Jagadeeswar-reddy-c/VirtualMaze_intern">More Details</a></p>
-
-                </div>
-                <div class="col-md-5 text-center">
-
-                    <img src="./images/Certificates/Jagadeesh_intern_VMZ.jpg" alt="Intern Certificate" width="280" height="400" />
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="Certifications">
-        <div class="container">
-            <div class="text-center mt-5 mb-5">
-                <h2>Certificates</h2>
-            </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card">
-                        <img src="./images/Certificates/course certify/Dev-Ops Certificate.png" class="card-img-top" alt="Dev ops Certificate" height="300" width="300">
-                        <div class="card-body">
-                            <h5 class="card-title">DevOps</h5>
-                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="./images/Certificates/course certify/APSCHE ADS.jpg" class="card-img-top" alt="ADS course certify" height="300" width="300">
-                        <div class="card-body">
-                            <h5 class="card-title">Advance Data Science</h5>
-                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="./images/Certificates/course certify/Microsoft Azure.jpg" class="card-img-top" alt="Microsoft Azure certificate" height="300" width="300">
-                        <div class="card-body">
-                            <h5 class="card-title">Microsoft Azure Fundamentals</h5>
-                            <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <p class="text-center my-4"><a class="btn btn-outline-secondary btn-lg px-4" href="https://drive.google.com/drive/folders/1Lo2lSkmnL5rYYlAH8Wc4nItuU8DUFsf0?usp=sharing">More Certificates</a></p>
-        </div>
-    </section>
-
-    <!--Projects-->
-    <section id="Projects">
-        <div class="container marketing">
-
-            <div class="text-center mt-5 mb-5">
-                <h2>Projects</h2>
-            </div>
-
-            <!-- START THE FEATURETTES -->
-
-            <!-- <hr class="featurette-divider"> -->
-
-            <div class="row featurette">
-                <div class="col-md-7 ">
-                    <h2 class="featurette-heading fw-normal lh-1">Automated USGS Satellite Image Downloads.<br><span class="text-body-secondary"> Python, Flask, Eathpy, rasterio</span></h2>
-                    <!-- <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p> -->
-                    <ul class="lead">
-                        <li>Crafted a Python script that decreased manual workload by 70%.</li>
-                        <li>Enhanced error-handling and caching for a consistent 95% success rate, even in unreliable network conditions.</li>
-                        <li>Tailored the script for 40% improved data relevance, saving 25 hours weekly. Enhanced data accuracy by 20% through cross-functional collaboration</li>
-                    </ul>
-                    <div>
-                        <p class="text-center my-4"><a class="btn btn-outline-secondary btn-lg px-4" href="https://github.com/Jagadeeswar-reddy-c/USGS">Link</a></p>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <img class="img-project" src="./images/Projects/USGS.png" alt="USGS" height="280" />
-                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2 table-2-project">
-                    <h2 class="featurette-heading fw-normal lh-1">Traffic Prediction<br> <span class="text-body-secondary">Python, Folium, Sklearn, ML</span></h2>
-                    <!-- <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p> -->
-                    <ul class="lead">
-                        <li>Developed a Python system achieving 90% accuracy through systematic data analysis and strategic feature engineering. </li>
-                        <li>Carried out model optimization strategies, resulting in a 25% reduction in prediction errors</li>
-                        <li>Implemented auto-regression models as part of the project methodology.</li>
-                    </ul>
-
-                    <div>
-                        <p class="text-center my-4"><a class="btn btn-outline-secondary btn-lg px-4" href="https://github.com/Jagadeeswar-reddy-c/Traffic_Prediction">Link</a></p>
-                    </div>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <img class="img-project" src="./images/Projects/Traffic Prediction.png" alt="Traffic Prediction" height="280" />
-                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading fw-normal lh-1">Online Results Portal. <br><span class="text-body-secondary">HTML, CSS, Python, Flash, MySql, Bootstrap</span></h2>
-                    <!-- <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p> -->
-                    <ul class="lead">
-                        <li>Admin tasks are simplified, reducing manual effort by 30%.</li>
-                        <li>Students access results and records swiftly, saving 70% of their time.</li>
-                        <li>Data is securely centralized for efficient management, increasing accessibility by 50%.</li>
-                        <li>Automation guarantees prompt and accurate results, improving efficiency by 60%.</li>
-                    </ul>
-
-                    <div>
-                        <p class="text-center my-4"><a class="btn btn-outline-secondary btn-lg px-4" href="https://github.com/Jagadeeswar-reddy-c/FINAL-YEAR-PROJECT">Link</a></p>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <img class="img-project" src="./images/Projects/Online Results Portal.png" alt="online Results portal" height="280" />
-                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
-
-                </div>
-            </div>
-
-            <!-- <hr class="featurette-divider"> -->
-
-            <!-- /END THE FEATURETTES -->
-
-            <div>
-                <p class="lead text-center my-4">In showcasing these projects, I want to make it clear: I'm not claiming to have perfected every aspect of them. That would be quite the feat! However, what I can assure you is this: I've poured my dedication and skills into each one, and
-                    I'm confident in my ability to excel in roles that require these project competencies. Plus, I'm always eager to learn and refine my craft further.</p>
-                <p class="text-center my-4"><a class="btn btn-outline-secondary btn-lg px-4" href="https://github.com/Jagadeeswar-reddy-c?tab=repositories">More Projetcs</a></p>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <section id="Footer">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                    </a>
-                    <span class="mb-3 mb-md-0 text-body-secondary">© 2024 JR</span>
-                </div>
-
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3">
-                        <a class="text-body-secondary" href="https://github.com/Jagadeeswar-reddy-c">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                          </svg>
-                        </a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-body-secondary" href="https://www.linkedin.com/in/chennuru-jagadeeswar-reddy/">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                          </svg>
-                        </a>
-                    </li>
-                    <!-- <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li> -->
-                </ul>
-            </footer>
-        </div>
-    </section>
-
-    <script>
-        // Smooth scroll to sections when clicking on navigation links
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- JavaScript -->
+  <script src="./assets/js/data-loader.js"></script>
+  <script src="./assets/js/renderer.js"></script>
+  <script src="./assets/js/interactions.js"></script>
 </body>
-
 </html>
