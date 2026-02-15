@@ -4,22 +4,22 @@
 
 :root {
   /* === TERMINAL COLOR PALETTE === */
-  /* Primary Colors */
-  --terminal-green: #00ff00;
-  --terminal-green-bright: #00ff41;
+  /* Classic Phosphor Green (like old CRT terminals) */
+  --terminal-green: #33ff33;
+  --terminal-green-bright: #00ff00;
   --terminal-green-dim: #00cc00;
-  --terminal-green-dark: #009900;
+  --terminal-green-dark: #008800;
 
   /* Background Colors */
   --terminal-black: #000000;
   --terminal-bg: #0a0a0a;
-  --terminal-bg-light: #1a1a1a;
-  --terminal-gray: #333333;
+  --terminal-bg-light: #111111;
+  --terminal-gray: #1a1a1a;
 
   /* Text Colors */
-  --terminal-white: #ffffff;
-  --terminal-gray-text: #999999;
-  --terminal-cyan: #00ffff;
+  --terminal-white: #e0e0e0;
+  --terminal-gray-text: #00aa00;
+  --terminal-cyan: #00ff00;
   --terminal-yellow: #ffff00;
 
   /* Accent Colors */
@@ -27,8 +27,8 @@
   --terminal-blue: #00aaff;
 
   /* Glow Effects */
-  --glow-green: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.3);
-  --glow-green-strong: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  --glow-green: 0 0 10px rgba(0, 255, 0, 0.6), 0 0 20px rgba(0, 255, 0, 0.4);
+  --glow-green-strong: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 45px #00ff00;
 
   /* === TYPOGRAPHY === */
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', 'Consolas', monospace;
