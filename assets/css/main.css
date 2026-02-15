@@ -163,7 +163,7 @@ a:hover {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: minmax(250px, 350px) 1fr;
+    grid-template-columns: minmax(400px, 500px) 1fr;
     gap: var(--space-12);
     align-items: center;
 }
@@ -177,8 +177,8 @@ a:hover {
 }
 
 .terminal-photo {
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
     object-position: center;
     border: 3px solid var(--terminal-green);
@@ -649,7 +649,7 @@ section {
     }
 
     .terminal-photo {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 }
