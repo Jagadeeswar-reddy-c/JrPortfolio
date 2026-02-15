@@ -1,45 +1,76 @@
 /* ========================================
-   ANIMATIONS & MOTION DESIGN
+   TERMINAL THEME - Animations
    ======================================== */
 
-/* === GRADIENT BACKGROUND ANIMATION === */
-@keyframes gradientShift {
+/* === TYPING EFFECT === */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes typing-text {
+    from {
+        max-width: 0;
+    }
+
+    to {
+        max-width: 100%;
+    }
+}
+
+/* === CURSOR BLINK === */
+@keyframes blink {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* === CRT SCAN LINE EFFECT === */
+@keyframes scanline {
     0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
+        transform: translateY(-100%);
     }
 
     100% {
-        background-position: 0% 50%;
+        transform: translateY(100vh);
     }
 }
 
-/* === FLOATING ANIMATION === */
-@keyframes float {
+/* === GREEN GLOW PULSE === */
+@keyframes glowPulse {
 
     0%,
     100% {
-        transform: translateY(0px);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.3);
     }
 
     50% {
-        transform: translateY(-20px);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.3);
     }
 }
 
-/* === PULSE GLOW === */
-@keyframes pulseGlow {
+/* === TEXT GLOW === */
+@keyframes textGlow {
 
     0%,
     100% {
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     }
 
     50% {
-        box-shadow: 0 0 40px rgba(102, 126, 234, 0.6);
+        text-shadow: 0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.5);
     }
 }
 
@@ -47,7 +78,7 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
 
     to {
@@ -56,29 +87,14 @@
     }
 }
 
-/* === FADE IN DOWN === */
-@keyframes fadeInDown {
+/* === FADE IN === */
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-30px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* === SCALE IN === */
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
     }
 }
 
@@ -86,7 +102,7 @@
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(30px);
     }
 
     to {
@@ -95,53 +111,79 @@
     }
 }
 
-/* === SLIDE IN LEFT === */
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* === SHIMMER EFFECT === */
-@keyframes shimmer {
+/* === BOOT SEQUENCE === */
+@keyframes bootSequence {
     0% {
-        background-position: -1000px 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
     }
 
     100% {
-        background-position: 1000px 0;
+        opacity: 0;
+    }
+}
+
+/* === FLICKER EFFECT === */
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    41%,
+    43% {
+        opacity: 0.8;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    47%,
+    49% {
+        opacity: 0.9;
     }
 }
 
 /* === UTILITY CLASSES === */
-.animate-float {
-    animation: float 3s ease-in-out infinite;
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(40, end) forwards;
 }
 
-.animate-fade-in-up {
+.cursor::after {
+    content: '▋';
+    animation: blink 1s step-end infinite;
+    color: var(--terminal-green);
+}
+
+.glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+.text-glow {
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+.fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.animate-fade-in-down {
-    animation: fadeInDown 0.6s ease-out forwards;
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
 }
 
-.animate-scale-in {
-    animation: scaleIn 0.5s ease-out forwards;
-}
-
-.animate-slide-in-right {
+.slide-in-right {
     animation: slideInRight 0.6s ease-out forwards;
-}
-
-.animate-slide-in-left {
-    animation: slideInLeft 0.6s ease-out forwards;
 }
 
 /* === STAGGERED ANIMATIONS === */
@@ -165,37 +207,17 @@
     animation-delay: 0.5s;
 }
 
-.stagger-6 {
-    animation-delay: 0.6s;
-}
-
 /* === HOVER EFFECTS === */
-.hover-lift {
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-2xl);
-}
-
 .hover-glow {
-    transition: box-shadow var(--transition-base);
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
 
 .hover-glow:hover {
-    box-shadow: var(--shadow-glow);
+    box-shadow: var(--glow-green-strong);
+    transform: translateY(-4px);
 }
 
-.hover-scale {
-    transition: transform var(--transition-bounce);
-}
-
-.hover-scale:hover {
-    transform: scale(1.05);
-}
-
-/* === REDUCED MOTION PREFERENCE === */
+/* === REDUCED MOTION === */
 @media (prefers-reduced-motion: reduce) {
 
     *,
@@ -207,10 +229,10 @@
     }
 }
 
-/* === SCROLL ANIMATIONS (Applied via JS) === */
+/* === SCROLL REVEAL === */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 

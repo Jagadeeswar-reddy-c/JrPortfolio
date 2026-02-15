@@ -15,31 +15,6 @@ class Interactions {
         this.setupNavigation();
         this.setupProjectFilters();
         this.setupSmoothScroll();
-        this.animateHeroSequence();
-    }
-
-    /**
-     * Animate hero section sequence
-     */
-    animateHeroSequence() {
-        const elements = [
-            '.hero-greeting',
-            '.hero-name',
-            '.hero-title',
-            '.hero-description',
-            '.hero-metrics',
-            '.hero-cta'
-        ];
-
-        elements.forEach((selector, index) => {
-            const element = document.querySelector(selector);
-            if (element) {
-                setTimeout(() => {
-                    element.style.opacity = '1';
-                    element.classList.add('animate-fade-in-up');
-                }, index * 150);
-            }
-        });
     }
 
     /**
@@ -70,31 +45,17 @@ class Interactions {
      * Setup navigation scroll behavior
      */
     setupNavigation() {
-        const nav = document.querySelector('.nav');
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
+        const nav = document.querySelector('.terminal-nav');
+        const navToggle = document.getElementById('mobile-menu-toggle');
+        const navLinks = document.getElementById('nav-links');
         const navLinkItems = document.querySelectorAll('.nav-link');
-
-        // Scroll effect
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-
-            lastScroll = currentScroll;
-        });
 
         // Mobile menu toggle
         if (navToggle) {
             navToggle.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
                 const isOpen = navLinks.classList.contains('active');
-                navToggle.textContent = isOpen ? '✕' : '☰';
+                navToggle.textContent = isOpen ? '[ CLOSE ]' : '[ MENU ]';
             });
         }
 
@@ -102,7 +63,7 @@ class Interactions {
         navLinkItems.forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                if (navToggle) navToggle.textContent = '☰';
+                if (navToggle) navToggle.textContent = '[ MENU ]';
             });
         });
 
@@ -186,25 +147,12 @@ class Interactions {
 
                     if (filter === 'all' || tags.includes(filter)) {
                         card.style.display = '';
-                        card.style.animation = 'scaleIn 0.4s ease-out';
+                        card.style.animation = 'fadeInUp 0.4s ease-out';
                     } else {
                         card.style.display = 'none';
                     }
                 });
             });
-        });
-    }
-
-    /**
-     * Add parallax effect to background
-     */
-    setupParallax() {
-        const background = document.querySelector('.animated-background');
-        if (!background) return;
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            background.style.transform = `translateY(${scrolled * 0.5}px)`;
         });
     }
 }
@@ -216,41 +164,22 @@ class Interactions {
 async function initApp() {
     console.log('🚀 Initializing portfolio...');
 
+    const loadingScreen = document.getElementById('loading-screen');
+    const loadingText = document.getElementById('loading-text');
+
     try {
-        // Show loading state
-        document.body.insertAdjacentHTML('beforeend', `
-      <div id="loading" style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #2d1b4e 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: opacity 0.5s ease;
-      ">
-        <div style="text-align: center;">
-          <div style="
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(102, 126, 234, 0.2);
-            border-top-color: #667eea;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
-          "></div>
-          <p style="color: #667eea; font-size: 1.2rem;">Loading Portfolio...</p>
-        </div>
-      </div>
-      <style>
-        @keyframes spin {
-          to { transform: rotate(360deg); }
+        // Simulated boot sequence messages
+        const bootMessages = [
+            '[ INITIALIZING SYSTEM... ]',
+            '[ LOADING PROFILE DATA... ]',
+            '[ RENDERING COMPONENTS... ]',
+            '[ BOOT COMPLETE ]'
+        ];
+
+        for (let i = 0; i < bootMessages.length; i++) {
+            if (loadingText) loadingText.textContent = bootMessages[i];
+            await new Promise(resolve => setTimeout(resolve, 400));
         }
-      </style>
-    `);
 
         // Load profile data
         const data = await dataLoader.loadProfile();
@@ -264,19 +193,20 @@ async function initApp() {
 
         // Remove loading screen
         setTimeout(() => {
-            const loading = document.getElementById('loading');
-            if (loading) {
-                loading.style.opacity = '0';
-                setTimeout(() => loading.remove(), 500);
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => loadingScreen.remove(), 500);
             }
-        }, 800);
+        }, 500);
 
         console.log('✨ Portfolio initialized successfully!');
 
     } catch (error) {
         console.error('Failed to initialize portfolio:', error);
-        const loading = document.getElementById('loading');
-        if (loading) loading.remove();
+        if (loadingText) loadingText.textContent = '[ ERROR: BOOT FAILED ]';
+        setTimeout(() => {
+            if (loadingScreen) loadingScreen.remove();
+        }, 2000);
     }
 }
 

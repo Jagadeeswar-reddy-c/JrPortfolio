@@ -1,91 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Meta Information -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+
   <!-- SEO Meta Tags -->
   <title>Jagadeeswar Reddy Chennuru | ML Engineer & Systems Builder</title>
-  <meta name="description" content="MSc Computer Science student at Saarland University specializing in Machine Learning, Python development, and production systems. Building algorithmic trading platforms and computer vision solutions.">
-  <meta name="keywords" content="Machine Learning, Python, Computer Science, ML Engineer, Trading Systems, Computer Vision, Data Analysis, Portfolio, Jagadeeswar Reddy">
+  <meta name="description"
+    content="MSc Computer Science student at Saarland University specializing in Machine Learning, Python development, and production systems. Building algorithmic trading platforms and computer vision solutions.">
+  <meta name="keywords"
+    content="Machine Learning, Python, Computer Science, ML Engineer, Trading Systems, Computer Vision, Data Analysis, Portfolio, Jagadeeswar Reddy">
   <meta name="author" content="Jagadeeswar Reddy Chennuru">
-  
-  <!-- Open Graph Meta Tags (LinkedIn, Facebook preview) -->
+
+  <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Jagadeeswar Reddy Chennuru | ML Engineer & Systems Builder">
-  <meta property="og:description" content="Building production ML systems for financial markets and computer vision applications.">
+  <meta property="og:description"
+    content="Building production ML systems for financial markets and computer vision applications.">
   <meta property="og:url" content="https://jagadeeswar-reddy-c.github.io/JrPortfolio/">
   <meta property="og:image" content="https://jagadeeswar-reddy-c.github.io/JrPortfolio/images/preview.png">
-  
+
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Jagadeeswar Reddy Chennuru | ML Engineer">
   <meta name="twitter:description" content="MSc CS student building production ML systems">
-  
+
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
-  
-  <!-- Preconnect to improve performance -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts - JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/animations.css">
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
-<body>
-  <!-- Animated Background -->
-  <div class="animated-background"></div>
 
-  <!-- Navigation -->
-  <nav class="nav">
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-text" id="loading-text">[ INITIALIZING SYSTEM... ]</div>
+    <div class="loading-bar">
+      <div class="loading-progress"></div>
+    </div>
+  </div>
+
+  <!-- Terminal Navigation -->
+  <nav class="terminal-nav">
     <div class="container">
-      <div class="nav-content">
-        <a href="#hero" class="nav-logo">JR</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
+      <span class="nav-prompt">user@portfolio:~$</span>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">[ MENU ]</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">about</a></li>
+        <li><a href="#skills" class="nav-link">skills</a></li>
+        <li><a href="#projects" class="nav-link">projects</a></li>
+        <li><a href="#experience" class="nav-link">experience</a></li>
+        <li><a href="#contact" class="nav-link">contact</a></li>
+      </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="container">
-      <div class="hero-content">
-        <p class="hero-greeting">Hi there! 👋 I'm</p>
-        <h1 class="hero-name">Jagadeeswar Reddy Chennuru</h1>
-        <p class="hero-title">MSc Computer Science Student | ML Engineer | Systems Builder</p>
-        <p class="hero-description">
-          Building production-grade machine learning systems, algorithmic trading platforms, 
-          and computer vision solutions with a focus on real-world impact and scalability.
-        </p>
-        
-        <div class="hero-metrics">
-          <div class="metric">
-            <span class="metric-value">90%+</span>
-            <span class="metric-label">Model Accuracy</span>
-          </div>
-          <div class="metric">
-            <span class="metric-value">10K+</span>
-            <span class="metric-label">Sensor Readings</span>
-          </div>
-          <div class="metric">
-            <span class="metric-value">IEEE</span>
-            <span class="metric-label">Published</span>
-          </div>
+      <div class="hero-grid">
+        <!-- Profile Photo -->
+        <div class="hero-photo">
+          <img src="./images/photo_1_-removebg-preview.png" alt="Jagadeeswar Reddy Chennuru" class="terminal-photo">
         </div>
 
-        <div class="hero-cta">
-          <!-- Links will be dynamically populated -->
+        <!-- Terminal Output -->
+        <div class="hero-terminal">
+          <div class="terminal-header">
+            <span class="terminal-title">[user@portfolio ~]$</span>
+          </div>
+          <div class="terminal-output">
+            <p class="typing-text">$ cat profile.txt</p>
+            <h1 class="hero-name cursor">Jagadeeswar Reddy Chennuru</h1>
+            <p class="hero-title">> MSc Computer Science Student | ML Engineer | Systems Builder</p>
+            <p class="hero-description">
+              MSc Computer Science student at Saarland University with strong focus on
+              Python-based data analysis and applied machine learning. Hands-on experience
+              building end-to-end ML pipelines, automation systems, and real-time dashboards.
+              Second author on an IEEE publication on deep-learning-based scene understanding
+              and automated report generation. Actively developing large-scale projects in
+              computer vision, time-series analysis, and algorithmic trading systems.
+            </p>
+
+            <!-- Stats -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-value">90%+</span>
+                <span class="stat-label">MODEL ACCURACY</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">10K+</span>
+                <span class="stat-label">SENSOR READINGS</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">IEEE</span>
+                <span class="stat-label">PUBLISHED</span>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="hero-cta" id="hero-cta">
+              <!-- Links will be dynamically populated -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -94,22 +123,18 @@
   <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">ABOUT ME</span>
-        <h2 class="section-title">Who I Am</h2>
-        <p class="section-description">
-          MSc Computer Science student at Saarland University with hands-on experience 
-          building end-to-end ML pipelines, automation systems, and real-time dashboards.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hero Project Section -->
-  <section id="hero-project" class="section">
-    <div class="container">
-      <div class="hero-project-card reveal" id="hero-project-content">
-        <!-- Content will be dynamically populated -->
+      <div class="terminal-window reveal">
+        <div class="terminal-titlebar">
+          <span>[about]</span>
+          <span class="terminal-controls">_□✕</span>
+        </div>
+        <div class="terminal-content">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            MSc Computer Science student at Saarland University with hands-on experience
+            building end-to-end ML pipelines, automation systems, and real-time dashboards.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -117,15 +142,18 @@
   <!-- Skills Section -->
   <section id="skills" class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">EXPERTISE</span>
-        <h2 class="section-title">Skills & Technologies</h2>
-        <p class="section-description">
-          A comprehensive toolkit for building production-grade systems
-        </p>
-      </div>
-      <div id="skills-content">
-        <!-- Skills will be dynamically populated -->
+      <div class="terminal-window reveal">
+        <div class="terminal-titlebar">
+          <span>[skills]</span>
+          <span class="terminal-controls">_□✕</span>
+        </div>
+        <div class="terminal-content">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">A comprehensive toolkit for building production-grade systems</p>
+          <div id="skills-content" class="skills-grid">
+            <!-- Skills will be dynamically populated -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -133,20 +161,23 @@
   <!-- Projects Section -->
   <section id="projects" class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">PORTFOLIO</span>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-description">
-          Real-world applications and research implementations
-        </p>
-      </div>
-      
-      <div id="project-filters" class="project-filters">
-        <!-- Filters will be dynamically populated -->
-      </div>
-      
-      <div id="projects-content" class="projects-grid">
-        <!-- Projects will be dynamically populated -->
+      <div class="terminal-window reveal">
+        <div class="terminal-titlebar">
+          <span>[projects]</span>
+          <span class="terminal-controls">_□✕</span>
+        </div>
+        <div class="terminal-content">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications and research implementations</p>
+
+          <div id="project-filters" class="projects-filter">
+            <!-- Filters will be dynamically populated -->
+          </div>
+
+          <div id="projects-content" class="projects-grid">
+            <!-- Projects will be dynamically populated -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -154,15 +185,18 @@
   <!-- Experience Section -->
   <section id="experience" class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">CAREER</span>
-        <h2 class="section-title">Work Experience</h2>
-        <p class="section-description">
-          Professional journey and key contributions
-        </p>
-      </div>
-      <div id="experience-content">
-        <!-- Experience will be dynamically populated -->
+      <div class="terminal-window reveal">
+        <div class="terminal-titlebar">
+          <span>[experience]</span>
+          <span class="terminal-controls">_□✕</span>
+        </div>
+        <div class="terminal-content">
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">Professional journey and key contributions</p>
+          <div id="experience-content" class="timeline">
+            <!-- Experience will be dynamically populated -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -170,12 +204,17 @@
   <!-- Education Section -->
   <section id="education" class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">ACADEMICS</span>
-        <h2 class="section-title">Education</h2>
-      </div>
-      <div id="education-content" style="display: grid; gap: 2rem; max-width: 800px; margin: 0 auto;">
-        <!-- Education will be dynamically populated -->
+      <div class="terminal-window reveal">
+        <div class="terminal-titlebar">
+          <span>[education]</span>
+          <span class="terminal-controls">_□✕</span>
+        </div>
+        <div class="terminal-content">
+          <h2 class="section-title">Education</h2>
+          <div id="education-content">
+            <!-- Education will be dynamically populated -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -183,12 +222,17 @@
   <!-- Publications Section -->
   <section id="publications" class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">RESEARCH</span>
-        <h2 class="section-title">Publications</h2>
-      </div>
-      <div id="publications-content" style="max-width: 800px; margin: 0 auto;">
-        <!-- Publications will be dynamically populated -->
+      <div class="terminal-window reveal">
+        <div class="terminal-titlebar">
+          <span>[publications]</span>
+          <span class="terminal-controls">_□✕</span>
+        </div>
+        <div class="terminal-content">
+          <h2 class="section-title">Publications</h2>
+          <div id="publications-content">
+            <!-- Publications will be dynamically populated -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -196,26 +240,30 @@
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
-      <div class="contact-content">
-        <div class="section-header">
-          <span class="section-tag">GET IN TOUCH</span>
+      <div class="terminal-window reveal">
+        <div class="terminal-titlebar">
+          <span>[contact]</span>
+          <span class="terminal-controls">_□✕</span>
+        </div>
+        <div class="terminal-content">
           <h2 class="section-title">Let's Connect</h2>
-          <p class="section-description">
+          <p class="section-subtitle">
             Open to discussing opportunities, collaborations, or just having a tech chat
           </p>
-        </div>
-        <div id="contact-links" class="contact-links">
-          <!-- Contact links will be dynamically populated -->
+          <div id="contact-links" class="contact-links">
+            <!-- Contact links will be dynamically populated -->
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer style="text-align: center; padding: 2rem 0; border-top: 2px solid var(--terminal-green); margin-top: 4rem;">
     <div class="container">
-      <p class="footer-text">
-        © 2026 Jagadeeswar Reddy Chennuru. Built with passion and modern web tech.
+      <p style="color: var(--terminal-green-dim); font-size: 0.875rem;">
+        © 2026 Jagadeeswar Reddy Chennuru | Built with <span style="color: var(--terminal-green);">❤</span> and terminal
+        aesthetics
       </p>
     </div>
   </footer>
@@ -225,4 +273,5 @@
   <script src="./assets/js/renderer.js"></script>
   <script src="./assets/js/interactions.js"></script>
 </body>
+
 </html>
