@@ -177,9 +177,10 @@ a:hover {
 }
 
 .terminal-photo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
     border: 3px solid var(--terminal-green);
     border-radius: 50%;
     box-shadow: var(--glow-green-strong);
@@ -645,5 +646,10 @@ section {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .terminal-photo {
+        width: 200px;
+        height: 200px;
     }
 }
