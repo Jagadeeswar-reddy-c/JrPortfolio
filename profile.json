@@ -90,7 +90,7 @@
     {
       "title": "Stock_AI – Algorithmic Trading & Market Analysis Platform",
       "links": [
-        "http://44.212.216.46:5173/new"
+        "http://46.225.131.179/new"
       ],
       "tags": [
         "python",
@@ -304,6 +304,7 @@
     "Programming": [
       "Python",
       "C",
+      "C++",
       "Java",
       "JavaScript",
       "SQL"
